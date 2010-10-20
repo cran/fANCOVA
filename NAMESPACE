@@ -1,0 +1,10 @@
+# exportPattern("^[[:alpha:]]+")
+
+# functions
+export(loess.ancova, loess.as, T.L2, T.aov, T.var, plot.fANCOVA, wild.boot)
+
+S3method(T.L2, default)
+S3method(T.aov, default)
+S3method(T.var, default)
+S3method(print, fANCOVA)
+S3method(plot, fANCOVA)
