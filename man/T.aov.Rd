@@ -10,7 +10,7 @@ Test the equality of nonparametric curves or surfaces based on an ANOVA-type sta
 
 y_ij= m_i(x_ij) + e_ij,
 
-where m_i(.), are nonparametric smooth functions; e_ij are independent identically distributed errors. The errors e_ij do not have to be independent N(0, sigma^2) errors. The errors can be heteroscedastic, i.e., e_ij = sigma_i(x_ij) * u_ij, where u_ij are independent identically distributed errors with mean 0 and variance 1. 
+where m_i(.), are nonparametric smooth functions; e_ij are independent identically distributed errors. The errors e_ij do not have to be independent N(0, sigma^2) errors. The errors can be heteroscedastic, i.e., e_ij = sigma_i(x_ij) * u_ij, where u_ij are independent identically distributed errors with mean 0 and variance 1.
 
 We are interested in the problem of testing the equality of the regression curves (when x is one-dimensional) or surfaces (when x is two-dimensional),
 
@@ -23,8 +23,8 @@ The problem can also be viewed as the test of the equality in the one-sample pro
 }
 \usage{
 T.aov(x, ...)
-\method{T.aov}{default}(x, y, group, B = 200, degree = 1, criterion = c("aicc", "gcv"), 
-		family = c("gaussian", "symmetric"), tstat = c("DN", "YB"), 
+\method{T.aov}{default}(x, y, group, B = 200, degree = 1, criterion = c("aicc", "gcv"),
+		family = c("gaussian", "symmetric"), tstat = c("DN", "YB"),
 		user.span = NULL, ...)
 }
 %- maybe also 'usage' for other objects documented here.
@@ -61,7 +61,7 @@ some control parameters can also be supplied directly
 }
 }
 \details{
-A wild bootstrap algorithm is applied to test the equality of nonparametric curves or surfaces based on an ANOVA-type statistic. 
+A wild bootstrap algorithm is applied to test the equality of nonparametric curves or surfaces based on an ANOVA-type statistic.
 }
 \value{
 An object of class ``fANCOVA''
@@ -104,7 +104,7 @@ y3 <- sin(2*x3)  + e3
 
 data.bind <- rbind(cbind(x1,y1,1), cbind(x2,y2,2),cbind(x3,y3,3))
 data.bind <- data.frame(data.bind)
-colnames(data.bind)=c('x','y','group') 
+colnames(data.bind)=c('x','y','group')
 
 
 t1 <- T.aov(data.bind$x, data.bind$y, data.bind$group)
@@ -139,7 +139,7 @@ y3 <- sin(2*x31) + sin(2*x32) + e3
 
 data.bind <- rbind(cbind(x11, x12 ,y1,1), cbind(x21, x22, y2,2),cbind(x31, x32,y3,3))
 data.bind <- data.frame(data.bind)
-colnames(data.bind)=c('x1','x2', 'y','group') 
+colnames(data.bind)=c('x1','x2', 'y','group')
 
 T.aov(data.bind[,c(1,2)], data.bind$y, data.bind$group)
 }

@@ -1,4 +1,5 @@
 \name{plot.fANCOVA}
+\alias{plot}
 \alias{plot.fANCOVA}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
@@ -8,8 +9,7 @@ Plot a fANCOVA Object
   To plot a fANCOVA object
 }
 \usage{
-plot.fANCOVA(x, test.statistic = TRUE, main = "", n = 256, 
-		legend.position = "topright", ...)
+\method{plot}{fANCOVA}(x, test.statistic=TRUE, main="", n=256, legend.position="topright", \dots)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
